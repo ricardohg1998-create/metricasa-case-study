@@ -8,7 +8,7 @@ I built a property valuation flow that connects public Catastro data, informatio
 
 ![Property valuation interface from the private beta](assets/valuation-workspace.webp)
 
-*Private-beta interface. The displayed estimate and confidence indicator are product outputs, not an independently validated measure of valuation accuracy. Labels in the screenshot are part of that version of the interface.*
+*Property valuation workspace from the private beta.*
 
 ## The problem
 
@@ -40,18 +40,10 @@ flowchart LR
 
 **Keep the external integration on the server.** Catastro access and valuation operations sit behind the public form. The UI collects input and explains progress; it does not become the source of truth for a property record or an authenticated CRM action.
 
-**Record consent as data.** The project preserves acceptance context, including time and terms version. That supports traceability; a consent table alone does not certify legal compliance.
+**Record consent as data.** The project preserves acceptance context, including time and terms version, so the team can trace what was accepted alongside the enquiry.
 
-## Verification and limitations
+## Verification and status
 
-The private project contains tests for the price resolver, valuation mapping, CRM actions and comparable-property processing. This repository presents the case; it does not run the private application's test suite.
+The private project contains tests for the price resolver, valuation mapping, CRM actions and comparable-property processing.
 
-The valuation is an estimate. Catastro data, regional reference prices and comparable-property inputs have different coverage and limitations. This case makes no claim about independently measured accuracy, completed sales, adoption or response-time benchmarks.
-
-The beta is not a public SaaS deployment. Its source, credentials and operational data remain private. The screenshots are selected portfolio material, not a live connection to the application.
-
-## Read this case
-
-This repository contains documentation and one product screenshot; there is no application to install.
-
-The case does not grant a licence to the underlying private application. Catastro and other third-party names belong to their respective organisations.
+Private beta; valuations are indicative estimates. This repository contains the technical case study and a selected screenshot; application source is private.
